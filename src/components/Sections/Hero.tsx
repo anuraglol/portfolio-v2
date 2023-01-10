@@ -4,9 +4,13 @@ import { FC } from "react";
 const Hero: FC = () => {
   return (
     <Flex color="neutral.100" gap="3" alignItems="center">
-      <Avatar src="/images/avatar.jpg" size="xl" filter="grayscale(10%)" />
+      <Avatar
+        src="/images/avatar.jpg"
+        size={{ base: "lg", md: "xl" }}
+        filter="grayscale(10%)"
+      />
       <Flex direction="column">
-        <Text fontSize="xl" fontWeight="500">
+        <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="500">
           Hello, I&apos;m Anurag
         </Text>
         <Text color="neutral.300">

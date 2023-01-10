@@ -1,11 +1,17 @@
+import { useIsomorphicLayoutEffect } from "@/hooks/useIsomorphicEffect";
 import { Flex, Text } from "@chakra-ui/react";
 import { FC, useEffect, useState } from "react";
 import { RxClock } from "react-icons/rx";
 
 const Clock: FC = () => {
   const [time, setTime] = useState(new Date());
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  useIsomorphicLayoutEffect(() => {
     const interval = setInterval(() => {
       setTime(new Date());
     }, 1000);
@@ -18,7 +24,7 @@ const Clock: FC = () => {
       <RxClock size={25} />
 
       <Text>
-        {time.toLocaleTimeString()},{" "}
+        {hydrated ? time.toLocaleTimeString() : new Date().toUTCString()},{" "}
         {new Date().toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",

@@ -1,7 +1,6 @@
 import { CANDYPAY_TWITTER_HANDLE } from "@/lib/constants/urls";
 import { Flex, Link, Text } from "@chakra-ui/react";
 import { FC } from "react";
-import { Clock } from "../Misc/Clock";
 import { NowPlaying } from "../Misc/NowPlaying";
 
 const About: FC = () => {
@@ -25,7 +24,7 @@ const About: FC = () => {
           >
             web3
           </Text>{" "}
-          space. Frontend at{" "}
+          space. Web engineer at{" "}
           <Link href={CANDYPAY_TWITTER_HANDLE} isExternal>
             <Text
               as="span"
@@ -42,7 +41,6 @@ const About: FC = () => {
         </Text>
 
         <NowPlaying />
-        <Clock />
       </Flex>
     </Flex>
   );

@@ -3,27 +3,28 @@ import { About } from "@/components/Sections/About";
 import { Hero } from "@/components/Sections/Hero";
 import { Connect } from "@/components/Sections/Links";
 import { Work } from "@/components/Sections/Work";
-import { Box } from "@chakra-ui/react";
+import { DEFAULT_FONT_SIZES, DEFAULT_X_PADDING } from "@/lib/constants/ui";
+import { Box, Flex } from "@chakra-ui/react";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
     <Box
       minH="100vh"
-      w="full"
+      minW="full"
       bg="primary"
-      display="flex"
-      flexDir="column"
-      gap="12"
-      px="24rem"
       py="36"
       color="white"
+      fontSize={DEFAULT_FONT_SIZES}
+      overflowX="hidden"
     >
-      <Hero />
-      <About />
-      <Work />
-      <Connect />
-      <Footer />
+      <Flex direction="column" gap="12" px={DEFAULT_X_PADDING}>
+        <Hero />
+        <About />
+        <Work />
+        <Connect />
+        <Footer />
+      </Flex>
     </Box>
   );
 };
