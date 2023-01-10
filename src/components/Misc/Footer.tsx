@@ -9,7 +9,10 @@ const Footer: FC = () => {
       w="full"
       justifyContent="center"
       direction="column"
-      fontSize="md"
+      fontSize={{
+        base: "xs",
+        md: "md",
+      }}
       mt="6"
     >
       <Text color="neutral.300">

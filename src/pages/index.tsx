@@ -13,7 +13,11 @@ const Home: NextPage = () => {
       minH="100vh"
       minW="full"
       bg="primary"
-      py="36"
+      py={{
+        base: "10",
+        md: "20",
+        lg: "36",
+      }}
       color="white"
       fontSize={DEFAULT_FONT_SIZES}
       overflowX="hidden"
