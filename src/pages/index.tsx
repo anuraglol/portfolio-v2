@@ -1,4 +1,5 @@
 import { Footer } from "@/components/Misc/Footer";
+import { MessageElement } from "@/components/Misc/Message";
 import { About } from "@/components/Sections/About";
 import { Hero } from "@/components/Sections/Hero";
 import { Connect } from "@/components/Sections/Links";
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
         <About />
         <Work />
         <Connect />
+        <MessageElement />
         <Footer />
       </Flex>
     </Box>

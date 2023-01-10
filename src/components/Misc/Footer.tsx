@@ -30,7 +30,7 @@ const Footer: FC = () => {
         .
       </Text>
       <Text color="neutral.400">
-        Thanks for visiting! Have a happy day {";)"}
+        Thanks for visiting! Have a good day {";)"}
       </Text>
     </Flex>
   );
