@@ -21,23 +21,28 @@ const MessageElement: FC = () => {
         duration: 4000,
         isClosable: true,
         render: () => (
-          <Box px="3" py="3" rounded="sm" bg="neutral.700" color="neutral.100">
+          <Box px="4" py="3" rounded="sm" bg="neutral.700" color="neutral.100">
             <Text fontWeight="500">Message Sent.</Text>
           </Box>
         ),
       });
     },
-    onError: () => {
-      toast({
-        position: "bottom-right",
-        duration: 4000,
-        isClosable: true,
-        render: () => (
-          <Box px="3" py="3" rounded="sm" bg="red.700" color="red.100">
-            <Text fontWeight="500">Oops, Something went wrong.</Text>
-          </Box>
-        ),
-      });
+    onError: (err) => {
+      if ((err as any)?.response?.status === 429) {
+        toast({
+          position: "bottom-right",
+          duration: 4000,
+          isClosable: true,
+          render: () => (
+            <Box px="4" py="3" rounded="sm" bg="red.700" color="red.100">
+              <Text fontWeight="500">Woah there! Slow down.</Text>
+              <Text fontSize="sm" mt="1">
+                You can only send one message every 15 minutes {";)"}
+              </Text>
+            </Box>
+          ),
+        });
+      }
     },
   });
 
