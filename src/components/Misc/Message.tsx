@@ -1,8 +1,8 @@
 import styles from "@/styles/tooltip.module.css";
+import { postMsg } from "@/utils/api/postMsg";
 import { Box, Flex, Input, Text, useToast } from "@chakra-ui/react";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { useMutation } from "@tanstack/react-query";
-import axios from "axios";
 import { FC, useState } from "react";
 import { HiOutlinePaperAirplane } from "react-icons/hi";
 
@@ -13,20 +13,28 @@ const MessageElement: FC = () => {
   const { mutate, isLoading } = useMutation({
     mutationKey: ["postMessage"],
     mutationFn: async () => {
-      await axios.post("/api/postMessage", {
-        message,
-      });
+      await postMsg(message);
     },
     onSuccess: () => {
       toast({
-        title: "Message Sent.",
         position: "bottom-right",
-        status: "success",
         duration: 4000,
         isClosable: true,
         render: () => (
           <Box px="3" py="3" rounded="sm" bg="neutral.700" color="neutral.100">
             <Text fontWeight="500">Message Sent.</Text>
+          </Box>
+        ),
+      });
+    },
+    onError: () => {
+      toast({
+        position: "bottom-right",
+        duration: 4000,
+        isClosable: true,
+        render: () => (
+          <Box px="3" py="3" rounded="sm" bg="red.700" color="red.100">
+            <Text fontWeight="500">Oops, Something went wrong.</Text>
           </Box>
         ),
       });
