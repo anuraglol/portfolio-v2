@@ -21,4 +21,6 @@ const ExternalLinks: ILink[] = [
   },
 ];
 
-export { CANDYPAY_TWITTER_HANDLE, ExternalLinks, GITHUB_REPO };
+const DISCORD_HANDLER = "Anurag#1111";
+
+export { CANDYPAY_TWITTER_HANDLE, ExternalLinks, GITHUB_REPO, DISCORD_HANDLER };

@@ -3,6 +3,7 @@ import { ILink } from "@/typings/url";
 import { Flex, Link, Text } from "@chakra-ui/react";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { FC } from "react";
+import { DiscordElement } from "../Misc/Discord";
 
 const Element: FC<ILink> = ({ name, url, username }) => {
   return (
@@ -36,6 +37,7 @@ const Connect: FC = () => {
               }}
             />
           ))}
+          <DiscordElement />
         </Flex>
       </Flex>
     </Flex>
