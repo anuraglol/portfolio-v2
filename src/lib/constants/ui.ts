@@ -3,7 +3,6 @@ const DEFAULT_X_PADDING = {
   sm: "12",
   md: "48",
   lg: "96",
-  xl: "26rem",
   "2xl": "28rem",
 };
 

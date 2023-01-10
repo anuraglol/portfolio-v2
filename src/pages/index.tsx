@@ -18,6 +18,9 @@ const Home: NextPage = () => {
         md: "20",
         lg: "36",
       }}
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
       color="white"
       fontSize={DEFAULT_FONT_SIZES}
       overflowX="hidden"
