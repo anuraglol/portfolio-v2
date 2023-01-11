@@ -80,6 +80,7 @@ const MessageElement: FC = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             isRequired
+            isDisabled={isLoading}
           />
           <Tooltip.Provider>
             <Tooltip.Root delayDuration={100}>
