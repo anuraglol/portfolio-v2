@@ -1,5 +1,5 @@
 import styles from "@/styles/tooltip.module.css";
-import { postMsg } from "@/utils/api/postMsg";
+import { postMsg } from "@/utils/helpers/postMsg";
 import { Box, Flex, Input, Text, useToast } from "@chakra-ui/react";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { useMutation } from "@tanstack/react-query";
@@ -60,9 +60,9 @@ const MessageElement: FC = () => {
           w="full"
           rounded="md"
           bg="neutral.800"
-          py="3"
+          py={{ base: "2", md: "3" }}
           backdropBlur="3xl"
-          px="4"
+          px={{ base: "4", md: "6" }}
           fontWeight="medium"
           display="flex"
           alignItems="center"
@@ -95,6 +95,7 @@ const MessageElement: FC = () => {
                   transitionDuration="0.5"
                   type="submit"
                   disabled={isLoading}
+                  aria-label="Send Message"
                 >
                   <HiOutlinePaperAirplane size={26} />
                 </Box>

@@ -36,8 +36,6 @@ const About: FC = () => {
             </Text>
           </Link>
           .
-          <br />
-          Mostly found vibing to songs or scrolling through Pinterest.
         </Text>
 
         <NowPlaying />

@@ -17,7 +17,7 @@ const Element: FC<IElementProps> = ({ aboutTime, name, url }) => {
       </Text>
       <Link href={url} isExternal>
         <Text color="neutral.300" display="flex" alignItems="center" gap="1">
-          {name}
+          <Text as="span">{name}</Text>
           <ArrowTopRightIcon />
         </Text>
       </Link>

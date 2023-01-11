@@ -8,7 +8,7 @@ const Builds: IBuild[] = [
   },
   {
     aboutTime: "2022",
-    name: "CandyPay - No Code Builder",
+    name: "CandyPay - No Code",
     url: "https://candypay.fun",
   },
   {
