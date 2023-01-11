@@ -12,7 +12,7 @@ const NowPlaying: FC = () => {
   });
 
   return (
-    <Flex mt="2" gap="2">
+    <Flex mt="2" gap="2" alignItems="center">
       <BsSpotify size={24} />
       {data?.isPlaying ? (
         <Link
@@ -20,6 +20,7 @@ const NowPlaying: FC = () => {
           isExternal
           textDecor="none"
           _hover={{ textDecor: "none" }}
+          noOfLines={1}
         >
           Listening to {data?.title}
         </Link>
