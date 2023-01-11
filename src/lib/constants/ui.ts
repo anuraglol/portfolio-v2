@@ -9,7 +9,7 @@ const DEFAULT_X_PADDING = {
 const DEFAULT_FONT_SIZES = {
   base: "sm",
   sm: "md",
-  xl: "lg",
+  lg: "lg",
   "2xl": "xl",
 };
 
