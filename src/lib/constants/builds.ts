@@ -4,11 +4,6 @@ const Builds: IBuild[] = [
   {
     aboutTime: "Ongoing",
     name: "Checkout",
-    url: "https://dashboard.candypay.fun",
-  },
-  {
-    aboutTime: "2022",
-    name: "CandyPay - No Code",
     url: "https://candypay.fun",
   },
   {
