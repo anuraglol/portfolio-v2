@@ -9,7 +9,7 @@ const About: FC = () => {
       <Flex direction="column" gap="2">
         <Text fontWeight="500">About</Text>
         <Text color="neutral.300">
-          Tweaking Interfaces, mostly in the{" "}
+          Tweaking interfaces, mostly in the{" "}
           <Text
             as="span"
             fontFamily="secondary"

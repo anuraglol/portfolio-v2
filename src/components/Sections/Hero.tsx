@@ -15,7 +15,7 @@ const Hero: FC = () => {
           Hello, I&apos;m Anurag
         </Text>
         <Text color="neutral.300">
-          Frontend Engineer Based in India, He/Him
+          Frontend engineer based in India, He/Him
         </Text>
       </Flex>
     </Flex>
